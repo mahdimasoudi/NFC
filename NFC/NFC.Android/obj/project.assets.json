@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v12.0": {
+      "Plugin.NFC/0.1.26": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid10.0/Plugin.NFC.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid10.0/Plugin.NFC.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -1780,8 +1792,9 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196"
+          "Plugin.NFC": "0.1.26",
+          "Xamarin.Essentials": "1.8.1",
+          "Xamarin.Forms": "5.0.0.2662"
         },
         "compile": {
           "bin/placeholder/NFC.dll": {}
@@ -1793,6 +1806,26 @@
     }
   },
   "libraries": {
+    "Plugin.NFC/0.1.26": {
+      "sha512": "Baus4HBTZOazesGt9GudBmMmmSGlWMEZps+ah3cJ9xKz/sxADSS5tHV3iSNuJr3yAQSJPc0u+/xwtNd/Y+Tetw==",
+      "type": "package",
+      "path": "plugin.nfc/0.1.26",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/monoandroid10.0/Plugin.NFC.dll",
+        "lib/net6.0-android31.0/Plugin.NFC.dll",
+        "lib/net6.0-android31.0/Plugin.NFC.xml",
+        "lib/net6.0-ios15.4/Plugin.NFC.dll",
+        "lib/net6.0/Plugin.NFC.dll",
+        "lib/netstandard1.0/Plugin.NFC.dll",
+        "lib/netstandard2.0/Plugin.NFC.dll",
+        "lib/xamarinios10/Plugin.NFC.dll",
+        "plugin.nfc.0.1.26.nupkg.sha512",
+        "plugin.nfc.nuspec"
+      ]
+    },
     "System.Numerics.Vectors/4.5.0": {
       "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
       "type": "package",
@@ -3403,6 +3436,7 @@
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v12.0": [
       "NFC >= 1.0.0",
+      "Plugin.NFC >= 0.1.26",
       "Xamarin.Essentials >= 1.7.0",
       "Xamarin.Forms >= 5.0.0.2196"
     ]
@@ -3449,6 +3483,10 @@
     "frameworks": {
       "monoandroid12.0": {
         "dependencies": {
+          "Plugin.NFC": {
+            "target": "Package",
+            "version": "[0.1.26, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.7.0, )"
@@ -3460,5 +3498,27 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Essentials from 1.8.1 to 1.7.0. Reference the package directly from the project to select a different version. \r\n NFC.Android -> NFC -> Xamarin.Essentials (>= 1.8.1) \r\n NFC.Android -> Xamarin.Essentials (>= 1.7.0)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "MonoAndroid,Version=v12.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 5.0.0.2662 to 5.0.0.2196. Reference the package directly from the project to select a different version. \r\n NFC.Android -> NFC -> Xamarin.Forms (>= 5.0.0.2662) \r\n NFC.Android -> Xamarin.Forms (>= 5.0.0.2196)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "MonoAndroid,Version=v12.0"
+      ]
+    }
+  ]
 }

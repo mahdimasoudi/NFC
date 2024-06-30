@@ -1,14 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "iagJHjCIivLXprwnBEmxWch1ZaUmCs/DGdKmP8XSi7YzlG0v4qr8UHQ8GnefAl1+lAwpMUlUYZRWmW0MF3y3vw==",
+  "dgSpecHash": "sq/ifvhxcTuOGqWZnktr1FAcn8n96MZ5A4s6TLL7Ur/GjInRD0kZfBT+OHUE0yTZ397GWaw/fMb6wtiqw30OJQ==",
   "success": true,
   "projectFilePath": "F:\\Workspace\\New AppSys\\NFC\\NFC\\NFC\\NFC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\masoudi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\masoudi\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\masoudi\\.nuget\\packages\\plugin.nfc\\0.1.26\\plugin.nfc.0.1.26.nupkg.sha512",
     "C:\\Users\\masoudi\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\masoudi\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\masoudi\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+    "C:\\Users\\masoudi\\.nuget\\packages\\xamarin.essentials\\1.8.1\\xamarin.essentials.1.8.1.nupkg.sha512",
+    "C:\\Users\\masoudi\\.nuget\\packages\\xamarin.forms\\5.0.0.2662\\xamarin.forms.5.0.0.2662.nupkg.sha512"
   ],
   "logs": []
 }

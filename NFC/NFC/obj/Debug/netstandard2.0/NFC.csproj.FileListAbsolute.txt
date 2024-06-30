@@ -1,0 +1,15 @@
+F:\Workspace\New AppSys\NFC\NFC\NFC\bin\Debug\netstandard2.0\NFC.deps.json
+F:\Workspace\New AppSys\NFC\NFC\NFC\bin\Debug\netstandard2.0\NFC.dll
+F:\Workspace\New AppSys\NFC\NFC\NFC\bin\Debug\netstandard2.0\NFC.pdb
+F:\Workspace\New AppSys\NFC\NFC\NFC\obj\Debug\netstandard2.0\NFC.csproj.AssemblyReference.cache
+F:\Workspace\New AppSys\NFC\NFC\NFC\obj\Debug\netstandard2.0\NFC.GeneratedMSBuildEditorConfig.editorconfig
+F:\Workspace\New AppSys\NFC\NFC\NFC\obj\Debug\netstandard2.0\App.xaml.g.cs
+F:\Workspace\New AppSys\NFC\NFC\NFC\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+F:\Workspace\New AppSys\NFC\NFC\NFC\obj\Debug\netstandard2.0\NFC.AssemblyInfoInputs.cache
+F:\Workspace\New AppSys\NFC\NFC\NFC\obj\Debug\netstandard2.0\NFC.AssemblyInfo.cs
+F:\Workspace\New AppSys\NFC\NFC\NFC\obj\Debug\netstandard2.0\NFC.csproj.CoreCompileInputs.cache
+F:\Workspace\New AppSys\NFC\NFC\NFC\obj\Debug\netstandard2.0\XamlC.stamp
+F:\Workspace\New AppSys\NFC\NFC\NFC\obj\Debug\netstandard2.0\NFC.dll
+F:\Workspace\New AppSys\NFC\NFC\NFC\obj\Debug\netstandard2.0\refint\NFC.dll
+F:\Workspace\New AppSys\NFC\NFC\NFC\obj\Debug\netstandard2.0\NFC.pdb
+F:\Workspace\New AppSys\NFC\NFC\NFC\obj\Debug\netstandard2.0\ref\NFC.dll

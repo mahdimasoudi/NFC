@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "8r7QJ/rqqJyWXdicNTvmdAvghqGOa8YnfSXwu8dskAaxBHD91sqRuidbxsLVmImZR5f6PDUmc7bBSbs7+PE2ww==",
+  "dgSpecHash": "TfQhsrOTfFyogcf3xDLk6y2EwQCQnCA53IR/HKNU8FdFnYx4i4uMVr+0ZP5iEJE8m5KmWrRTWDeinF2p3Vth5g==",
   "success": true,
   "projectFilePath": "F:\\Workspace\\New AppSys\\NFC\\NFC\\NFC.Android\\NFC.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\masoudi\\.nuget\\packages\\plugin.nfc\\0.1.26\\plugin.nfc.0.1.26.nupkg.sha512",
     "C:\\Users\\masoudi\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\masoudi\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",
     "C:\\Users\\masoudi\\.nuget\\packages\\xamarin.androidx.annotation\\1.2.0.1\\xamarin.androidx.annotation.1.2.0.1.nupkg.sha512",
@@ -63,5 +64,26 @@
     "C:\\Users\\masoudi\\.nuget\\packages\\xamarin.google.android.material\\1.4.0.2\\xamarin.google.android.material.1.4.0.2.nupkg.sha512",
     "C:\\Users\\masoudi\\.nuget\\packages\\xamarin.google.guava.listenablefuture\\1.0.0.2\\xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Essentials from 1.8.1 to 1.7.0. Reference the package directly from the project to select a different version. \r\n NFC.Android -> NFC -> Xamarin.Essentials (>= 1.8.1) \r\n NFC.Android -> Xamarin.Essentials (>= 1.7.0)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "MonoAndroid,Version=v12.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 5.0.0.2662 to 5.0.0.2196. Reference the package directly from the project to select a different version. \r\n NFC.Android -> NFC -> Xamarin.Forms (>= 5.0.0.2662) \r\n NFC.Android -> Xamarin.Forms (>= 5.0.0.2196)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "MonoAndroid,Version=v12.0"
+      ]
+    }
+  ]
 }
