@@ -634,3 +634,4 @@ F:\Workspace\New AppSys\NFC\NFC\NFC.Android\obj\Debug\120\lp\104\jl\files.cache
 F:\Workspace\New AppSys\NFC\NFC\NFC.Android\obj\Debug\120\android\assets\Plugin.NFC.dll
 F:\Workspace\New AppSys\NFC\NFC\NFC.Android\obj\Debug\120\android\src\crc6464b151ab0c8e99f1\ActivityLifecycleContextListener.java
 F:\Workspace\New AppSys\NFC\NFC\NFC.Android\obj\Debug\120\android\src\crc6464b151ab0c8e99f1\NFCImplementation_NfcBroadcastReceiver.java
+F:\Workspace\New AppSys\NFC\NFC\NFC.Android\obj\Debug\120\res\drawable\nfc.png

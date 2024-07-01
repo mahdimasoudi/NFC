@@ -13,75 +13,77 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <ScrollView>
-        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-            <Label FontSize="Large"
-                   HorizontalOptions="CenterAndExpand"
-                   Text="Plugin NFC Sample" />
-
-            <Button Clicked="Button_Clicked_StartListening"
-                    IsEnabled="{Binding NfcIsEnabled}"
-                    Text="Read Tag" />
-
-            <Button Clicked="Button_Clicked_StopListening"
-                    IsEnabled="{Binding NfcIsEnabled}"
-                    Text="Stop Listener" />
-
-            <Frame BorderColor="Gray" HasShadow="False">
-                <StackLayout>
-
-                    <StackLayout Padding="0"
+    <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="DimGray">
+        <StackLayout Margin="5">
+            <StackLayout>
+                <StackLayout Padding="0"
                                  HorizontalOptions="CenterAndExpand"
                                  Orientation="Horizontal"
                                  Spacing="0">
 
-                        <CheckBox x:Name="ChkReadOnly"
+                    <CheckBox x:Name="ChkReadOnly"
                                   IsChecked="False"
                                   IsEnabled="{Binding NfcIsEnabled}"
                                   VerticalOptions="Center"
                                   Color="Red" />
 
-                        <Label FontAttributes="Bold"
+                    <Label FontAttributes="Bold"
                                Text="Make Tag Read-Only"
                                TextColor="Red"
                                VerticalOptions="Center" />
-                    </StackLayout>
-
-                    <Button Clicked="Button_Clicked_StartWriting"
+                </StackLayout>
+                <StackLayout >
+                    <Button Clicked="Button_Clicked_StartWriting" TextColor="Wheat" BackgroundColor="DimGray"
                             IsEnabled="{Binding NfcIsEnabled}"
-                            Text="Write Tag (Text)" />
+                            Text="Write Tag (Text)" HorizontalOptions="FillAndExpand" />
 
-                    <Button Clicked="Button_Clicked_StartWriting_Uri"
+                    <Button Clicked="Button_Clicked_StartWriting_Uri" HorizontalOptions="FillAndExpand"  TextColor="Wheat" BackgroundColor="DimGray"
                             IsEnabled="{Binding NfcIsEnabled}"
                             Text="Write Tag (Uri)" />
 
-                    <Button Clicked="Button_Clicked_StartWriting_Custom"
+                    <Button Clicked="Button_Clicked_StartWriting_Custom" HorizontalOptions="FillAndExpand"  TextColor="Wheat" BackgroundColor="DimGray"
                             IsEnabled="{Binding NfcIsEnabled}"
                             Text="Write Tag (Custom)" />
 
                 </StackLayout>
-            </Frame>
-
-            <Button Clicked="Button_Clicked_FormatTag"
+                <Button Clicked="Button_Clicked_FormatTag" TextColor="red" BackgroundColor="DimGray"
                     IsEnabled="{Binding NfcIsEnabled}"
                     Text="Clear Tag" />
 
-            <Label Margin="0,6,0,0"
+            </StackLayout>
+        </StackLayout>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Start" Orientation="Horizontal" Margin="8">
+            <Button Clicked="Button_Clicked_StartListening" HorizontalOptions="FillAndExpand" BackgroundColor="Green"
+                    IsEnabled="{Binding NfcIsEnabled}"
+                    Text="Read Tag" />
+
+            <Button Clicked="Button_Clicked_StopListening" HorizontalOptions="FillAndExpand" BackgroundColor="Pink"
+                    IsEnabled="{Binding NfcIsEnabled}"
+                    Text="Stop Listener" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Margin="5">
+            <Entry HeightRequest="60" BackgroundColor="White" x:Name="Text"  HorizontalOptions="FillAndExpand" TextColor="Black" />
+            <Image Source="nfc" HeightRequest="50" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+        <Label Margin="0,6,0,0"
                    Padding="12,6"
-                   BackgroundColor="Blue"
+                 VerticalOptions="EndAndExpand"
                    HorizontalOptions="CenterAndExpand"
                    IsVisible="{Binding DeviceIsListening}"
                    Text="Listening for NFC Tag..."
                    TextColor="White" />
 
-            <Label Margin="0,6,0,0"
+        <Label Margin="0,6,0,0"
+             
                    Padding="12,6"
-                   BackgroundColor="Red"
+                   BackgroundColor="RosyBrown"
                    HorizontalOptions="CenterAndExpand"
                    IsVisible="{Binding NfcIsDisabled}"
                    Text="NFC IS DISABLED"
                    TextColor="White" />
-
-        </StackLayout>
-    </ScrollView>
+    </StackLayout>
 </ContentPage>

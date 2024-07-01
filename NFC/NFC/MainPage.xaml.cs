@@ -4,6 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System;
 using Xamarin.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace NFC
 {
@@ -56,49 +57,7 @@ namespace NFC
             base.OnAppearing();
 
             // In order to support Mifare Classic 1K tags (read/write), you must set legacy mode to true.
-            CrossNFC.Legacy = false;
-
-            if (CrossNFC.IsSupported)
-            {
-                if (!CrossNFC.Current.IsAvailable)
-                    await ShowAlert("NFC is not available");
-
-                NfcIsEnabled = CrossNFC.Current.IsEnabled;
-                if (!NfcIsEnabled)
-                    await ShowAlert("NFC is disabled");
-
-                if (Device.RuntimePlatform == Device.iOS)
-                    _isDeviceiOS = true;
-
-                //// Custom NFC configuration (ex. UI messages in French)
-                //CrossNFC.Current.SetConfiguration(new NfcConfiguration
-                //{
-                //	DefaultLanguageCode = "fr",
-                //	Messages = new UserDefinedMessages
-                //	{
-                //		NFCSessionInvalidated = "Session invalidée",
-                //		NFCSessionInvalidatedButton = "OK",
-                //		NFCWritingNotSupported = "L'écriture des TAGs NFC n'est pas supporté sur cet appareil",
-                //		NFCDialogAlertMessage = "Approchez votre appareil du tag NFC",
-                //		NFCErrorRead = "Erreur de lecture. Veuillez rééssayer",
-                //		NFCErrorEmptyTag = "Ce tag est vide",
-                //		NFCErrorReadOnlyTag = "Ce tag n'est pas accessible en écriture",
-                //		NFCErrorCapacityTag = "La capacité de ce TAG est trop basse",
-                //		NFCErrorMissingTag = "Aucun tag trouvé",
-                //		NFCErrorMissingTagInfo = "Aucune information à écrire sur le tag",
-                //		NFCErrorNotSupportedTag = "Ce tag n'est pas supporté",
-                //		NFCErrorNotCompliantTag = "Ce tag n'est pas compatible NDEF",
-                //		NFCErrorWrite = "Aucune information à écrire sur le tag",
-                //		NFCSuccessRead = "Lecture réussie",
-                //		NFCSuccessWrite = "Ecriture réussie",
-                //		NFCSuccessClear = "Effaçage réussi"
-                //	}
-                //});
-
-                SubscribeEvents();
-
-                await StartListeningIfNotiOS();
-            }
+           
         }
 
         protected override bool OnBackButtonPressed()
@@ -173,7 +132,9 @@ namespace NFC
 
             // Customized serial number
             var identifier = tagInfo.Identifier;
+           
             var serialNumber = NFCUtils.ByteArrayToHexString(identifier, ":");
+            Text.Text = serialNumber;
             var title = !string.IsNullOrWhiteSpace(serialNumber) ? $"Tag [{serialNumber}]" : "Tag Info";
 
             if (!tagInfo.IsSupported)
@@ -391,7 +352,11 @@ namespace NFC
         /// <param name="message">Message to be displayed</param>
         /// <param name="title">Alert title</param>
         /// <returns>The task to be performed</returns>
-        Task ShowAlert(string message, string title = null) => DisplayAlert(string.IsNullOrWhiteSpace(title) ? ALERT_TITLE : title, message, "Cancel");
+       private async Task ShowAlert(string message, string title = null)
+        {
+            await DisplayAlert(string.IsNullOrWhiteSpace(title) ? ALERT_TITLE : title, message, "Cancel");
+        }
+
 
         /// <summary>
         /// Task to start listening for NFC tags if the user's device platform is not iOS
@@ -434,6 +399,28 @@ namespace NFC
             {
                 await ShowAlert(ex.Message);
             }
+        }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await DisplayAlert("NFC", "Scan the NFC...", "ok");
+            CrossNFC.Legacy = false;
+
+            if (CrossNFC.IsSupported)
+            {
+                if (!CrossNFC.Current.IsAvailable)
+                    await ShowAlert("NFC is not available");
+
+                NfcIsEnabled = CrossNFC.Current.IsEnabled;
+                if (!NfcIsEnabled)
+                    await ShowAlert("NFC is disabled");
+
+                if (Device.RuntimePlatform == Device.iOS)
+                    _isDeviceiOS = true;
+                SubscribeEvents();
+                await StartListeningIfNotiOS();
+            }
+
         }
     }
 }
